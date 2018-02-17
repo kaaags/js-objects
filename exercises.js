@@ -343,9 +343,14 @@ console.log(isAutomaticTransmission);
       your results. Consider using `plainPerson` as your driver.
  */
 
+function addDriver(obj, per){
+  obj.driver = per;
+  return obj;
+}
 
-
-
+var stockCarWithDriver = addDriver(stockCar, plainPerson);
+console.log(stockCarWithDriver);
+//a
 /*
     #Final Boss
     The Dev League instructors want to ride your whip!
