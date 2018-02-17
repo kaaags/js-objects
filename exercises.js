@@ -250,18 +250,19 @@ printOrders(arrayOfObjects);
         to inspect your results.
 */
 
-var sumObj = {};
-
-sumObj.a = 1;
-sumObj.b = 2;
-sumObj.result = "";
+var sumObj = {
+a: 1,
+b: 2,
+result: "",
+};
 
 function objectAddition(obj){
   obj.result = obj.a + obj.b;
+  return obj;
 }
 
 var sumObjResult = objectAddition(sumObj);
-console.log(sumObj.result);
+console.log(sumObjResult);
 
 /*
 9. Print sum function and add as new key-value
@@ -280,6 +281,12 @@ console.log(sumObj.result);
         **create more** objects and invoke your function multiple times.
  */
 
+function printObj(obj){
+  return obj.a + " + " + obj.b + " = " + obj.result;
+}
+
+printObj(sumObjResult);
+console.log(printObj(sumObjResult));
 
 /*
 10. Putting stuff in `plainBox`
@@ -291,6 +298,16 @@ console.log(sumObj.result);
         plainBoxResult and use `console.log` to inspect your results.
  */
 
+function putInPlainBox(obj){
+  for(i = 0; i < 10; i++){
+    var randomNum = Math.floor(Math.random()*100);
+    obj.contents.push(randomNum);
+  }
+  return obj;
+}
+
+var plainBoxResult = putInPlainBox(plainBox);
+console.log(plainBoxResult);
 
 /*
 11. Detecting transmission
