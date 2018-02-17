@@ -38,14 +38,14 @@ console.log(books);
  "My dog `name` is `age` year old and likes to `speak` at strangers."
 */
 
-var dog = {};
-
-dog.name = "Buddy";
-dog.age = 5;
-dog.vegeterian = false;
-dog.color = ["black", "white"];
-dog.speak = function(){
-  return "bark!";
+var dog = {
+  name: "Buddy",
+  age: 5,
+  vegeterian: false,
+  color: ["black", "white"],
+  speak: function(){
+    return "bark!";
+  }
 };
 
 console.log("My dog "+dog.name+" is "+dog.age+" years old and likes to "+dog.speak()+" at strangers.");
